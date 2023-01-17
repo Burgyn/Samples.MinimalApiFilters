@@ -1,6 +1,6 @@
 using FluentValidation;
 
-public class NewProjectValidator : AbstractValidator<CreateProjetDto>
+internal class NewProjectValidator : AbstractValidator<CreateProjetDto>
 {
     public NewProjectValidator()
     {

@@ -2,12 +2,10 @@ using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IValidator<CreateProjetDto>, NewProjectValidator>();
-builder.Services.AddScoped<IValidator<ChangeProjectDescriptionDto>, ChangeProjectDescriptionValidator>();
+builder.Services.AddValidator<CreateProjetDto, NewProjectValidator>();
+builder.Services.AddValidator<ChangeProjectDescriptionDto, ChangeProjectDescriptionValidator>();
 
 var app = builder.Build();
 
